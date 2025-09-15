@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600&family=Open+Sans:wght@400;500;600&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e74c3c;
+            --secondary: #ecf0f1;
+            --accent: #3498db;
+            --text: #333;
+            --light-text: #777;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 4rem;
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: var(--spacing-md);
+        }
+
+        .portfolio-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        
+        .portfolio-header {
+            text-align: center;
+            padding: var(--spacing-lg);
+            background: var(--primary);
+            color: white;
+        }
+        
+        .portfolio-header h1 {
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+        }
+        
+        .portfolio-header p {
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .hero-component {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: var(--spacing-xl);
+            text-align: center;
+            border-radius: var(--border-radius);
+        }
+
+        .hero-component h2 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--primary);
+        }
+
+        .hero-component p {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            margin-bottom: var(--spacing-lg);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 0.6rem 1rem;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background: #1a252f;
+        }
+
+        .gallery-component {
+            padding: var(--spacing-lg);
+        }
+
+        .gallery-component h3 {
+            margin-bottom: var(--spacing-md);
+            color: var(--primary);
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            height: 150px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-component {
+            padding: var(--spacing-lg);
+        }
+
+        .about-component h3 {
+            margin-bottom: var(--spacing-md);
+            color: var(--primary);
+            text-align: center;
+        }
+
+        .about-component p {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-component {
+            padding: var(--spacing-lg);
+        }
+
+        .contact-component h3 {
+            margin-bottom: var(--spacing-md);
+            color: var(--primary);
+            text-align: center;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+            align-items: center;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .contact-detail i {
+            color: var(--accent);
+            width: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-component h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-component {
+                padding: var(--spacing-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio-container">
+        <header class="portfolio-header">
+            <h1><i class="fas fa-user"></i> My Portfolio</h1>
+            <p>Welcome to my professional portfolio</p>
+        </header>
+        <div class="hero-component">
+            <h2>Titan Business Pros YouTube</h2>
+            <p>Subscibe to our YouTube channel and find out how to create unlimited websites for free. Learn how to use all the tools you purchased along with helpful tips to streamline your business!</p>
+            <a href="https://www.youtube.com/@TitanBusinessPros" class="btn-primary">Join Our YouTube</a>
+        </div>
+        <div class="about-component">
+            <h3>Educate Yourself!</h3>
+            <p>Use our YouTube videos to streamline the tools you purchased for website development! Learn the following:<br><br>1. How to have unlimited websites for free!<br>2. How to create unlimited URL image links for free!<br>3. Instructions on how to use each program!<br>4. Helpful tips & additional tools to help your company!</p>
+        </div>
+        <div class="contact-component">
+            <h3>Get In Touch</h3>
+            <div class="contact-details">
+                <div class="contact-detail">
+                    <i class="fas fa-envelope"></i>
+                    <span>titanbusinesspros@gmail.com</span>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-phone"></i>
+                    <span>405-998-7979</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
